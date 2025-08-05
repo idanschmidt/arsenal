@@ -93,7 +93,13 @@
     <script>
       function checkAnswer() {
         var userAnswer = document.getElementById('answer').value.trim();
-        if (userAnswer === "2003-2004" || userAnswer === "2003-2004") {
+       if (
+        userAnswer === "2003/04" ||
+        userAnswer === "2003-04" ||
+        userAnswer === "2004" ||
+        userAnswer === "03/04" ||
+        userAnswer === "03-04"
+      ) {
           alert("נכון! בעונת 2003-2004 ארסנל זכתה באליפות בלי להפסיד אף משחק");
         } else {
           alert("לא נכון, נסו שוב.");
@@ -115,6 +121,7 @@
 
 </body>
 </html>
+
 
 
 
