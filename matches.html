@@ -1,4 +1,4 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -10,6 +10,21 @@
       margin: 20px;
       background-color: #f5f5f5;
       color: #222;
+      display: flex;
+      gap: 20px;
+    }
+
+    main {
+      flex: 3;
+    }
+
+    aside {
+      flex: 1;
+      background-color: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      height: fit-content;
     }
 
     header {
@@ -107,15 +122,6 @@
     }
 
     /* טבלת ליגה */
-    .league-table {
-      background-color: white;
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 500px;
-      margin: 0 auto 40px auto;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
     .league-table h2 {
       color: #ba0c2f;
       text-align: center;
@@ -125,11 +131,12 @@
     table {
       width: 100%;
       border-collapse: collapse;
+      font-size: 0.9rem;
     }
 
     th, td {
       border: 1px solid #ddd;
-      padding: 8px;
+      padding: 6px;
       text-align: center;
     }
 
@@ -140,67 +147,78 @@
 </head>
 <body>
 
-  <header>
-    <h1>סיקורי משחקים</h1>
-    <p>כאן תמצאו את הסיכומים, הדעות והמחשבות שלי על כל משחק של ארסנל.</p>
-  </header>
+  <main>
+    <header>
+      <h1>סיקורי משחקים</h1>
+      <p>כאן תמצאו את הסיכומים, הדעות והמחשבות שלי על כל משחק של ארסנל.</p>
+    </header>
 
-  <nav>
-    <a href="index.html">חזרה לדף הראשי</a>
-  </nav>
+    <nav>
+      <a href="index.html">חזרה לדף הראשי</a>
+    </nav>
 
-  <!-- כרטיסי משחק -->
-  <div class="cards-container">
-    <div class="match-card">
-      <h3>ארסנל 3 - ליברפול 1</h3>
-      <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg" alt="סמל ארסנל">
-      <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="סמל ליברפול">
-      <p>תאריך: 15/08/2025</p>
-      <a href="#">לקריאת הסיקור</a>
+    <!-- כרטיסי משחק -->
+    <div class="cards-container">
+      <div class="match-card">
+        <h3>ארסנל 3 - ליברפול 1</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg" alt="סמל ארסנל">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="סמל ליברפול">
+        <p>תאריך: 15/08/2025</p>
+        <a href="#">לקריאת הסיקור</a>
+      </div>
     </div>
-    <!-- אפשר להוסיף עוד כרטיסים כאן -->
-  </div>
 
-  <!-- רשימת סיקורים -->
-  <div class="reviews-list">
-    <h2>📜 רשימת סיקורים</h2>
-    <ul>
-      <li><a href="#">סיקור: ארסנל 3 - ליברפול 1</a></li>
-      <!-- הוסף עוד שורות כשיש סיקורים -->
-    </ul>
-  </div>
+    <!-- רשימת סיקורים -->
+    <div class="reviews-list">
+      <h2>📜 רשימת סיקורים</h2>
+      <ul>
+        <li><a href="#">סיקור: ארסנל 3 - ליברפול 1 (משחק הכנה)</a> – משחק הכנה שבו ארסנל הציגה שליטה ברוב דקות המשחק והדגימה רוטציה רחבה, הזדמנות לשחקנים צעירים להרשים.</li>
+      </ul>
+    </div>
+  </main>
 
-  <!-- טבלת ליגה -->
-  <div class="league-table">
-    <h2>📊 טבלת הליגה</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>מקום</th>
-          <th>קבוצה</th>
-          <th>משחקים</th>
-          <th>נקודות</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>ארסנל</td>
-          <td>1</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>ליברפול</td>
-          <td>1</td>
-          <td>0</td>
-        </tr>
-        <!-- הוסף שורות בהתאם למצב הליגה -->
-      </tbody>
-    </table>
-  </div>
+  <!-- טבלת ליגה בצד ימין -->
+  <aside>
+    <div class="league-table">
+      <h2>📊 טבלת הליגה</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>מקום</th>
+            <th>קבוצה</th>
+            <th>משחקים</th>
+            <th>נק'</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>ארסנל</td><td>0</td><td>0</td></tr>
+          <tr><td>2</td><td>אסטון וילה</td><td>0</td><td>0</td></tr>
+          <tr><td>3</td><td>בורנמות'</td><td>0</td><td>0</td></tr>
+          <tr><td>4</td><td>ברנטפורד</td><td>0</td><td>0</td></tr>
+          <tr><td>5</td><td>ברייטון</td><td>0</td><td>0</td></tr>
+          <tr><td>6</td><td>צ'לסי</td><td>0</td><td>0</td></tr>
+          <tr><td>7</td><td>קריסטל פאלאס</td><td>0</td><td>0</td></tr>
+          <tr><td>8</td><td>אברטון</td><td>0</td><td>0</td></tr>
+          <tr><td>9</td><td>פולהאם</td><td>0</td><td>0</td></tr>
+          <tr><td>10</td><td>איפסוויץ'</td><td>0</td><td>0</td></tr>
+          <tr><td>11</td><td>לסטר סיטי</td><td>0</td><td>0</td></tr>
+          <tr><td>12</td><td>ליברפול</td><td>0</td><td>0</td></tr>
+          <tr><td>13</td><td>מנצ'סטר סיטי</td><td>0</td><td>0</td></tr>
+          <tr><td>14</td><td>מנצ'סטר יונייטד</td><td>0</td><td>0</td></tr>
+          <tr><td>15</td><td>ניוקאסל</td><td>0</td><td>0</td></tr>
+          <tr><td>16</td><td>נוטינגהאם פורסט</td><td>0</td><td>0</td></tr>
+          <tr><td>17</td><td>סאות'המפטון</td><td>0</td><td>0</td></tr>
+          <tr><td>18</td><td>טוטנהאם</td><td>0</td><td>0</td></tr>
+          <tr><td>19</td><td>ווסטהאם</td><td>0</td><td>0</td></tr>
+          <tr><td>20</td><td>וולבס</td><td>0</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </aside>
 
 </body>
 </html>
+
+
 
 
