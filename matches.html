@@ -44,81 +44,13 @@
       font-weight: bold;
     }
 
-    /* כרטיסי משחק */
-    .cards-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-      margin-bottom: 40px;
-    }
-
-    .match-card {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 15px;
-      text-align: center;
-    }
-
-    .match-card img {
-      width: 50px;
-      height: auto;
-      margin: 10px;
-    }
-
-    .match-card h3 {
-      margin: 10px 0;
-      color: #ba0c2f;
-    }
-
-    .match-card p {
-      font-size: 0.9rem;
-    }
-
-    .match-card a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 12px;
-      background-color: #ba0c2f;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-
-    .match-card a:hover {
-      background-color: #a50b28;
-    }
-
-    /* רשימת סיקורים */
-    .reviews-list {
+    /* אזור סיקור */
+    #match-review {
       background-color: white;
       border-radius: 10px;
       padding: 20px;
       margin-bottom: 40px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .reviews-list h2 {
-      color: #ba0c2f;
-      margin-bottom: 15px;
-    }
-
-    .reviews-list ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .reviews-list li {
-      margin-bottom: 10px;
-    }
-
-    .reviews-list a {
-      color: darkred;
-      text-decoration: none;
-    }
-
-    .reviews-list a:hover {
-      text-decoration: underline;
     }
 
     /* טבלת ליגה */
@@ -157,13 +89,15 @@
       <a href="index.html">חזרה לדף הראשי</a>
     </nav>
 
-</div>
-
-<!-- אזור סיקור -->
-<section id="match-review" style="background-color:white; border-radius:10px; padding:20px; margin-bottom:40px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-  <h2 style="color:#ba0c2f;">⚽ ארסנל - מנצ'סטר יונייטד | מחזור ראשון</h2>
-
-
+    <!-- אזור סיקור -->
+    <section id="match-review">
+      <h2 style="color:#ba0c2f;">⚽ ארסנל - מנצ'סטר יונייטד | מחזור ראשון</h2>
+      <p>
+        כאן יופיע בהמשך הסיקור המלא של המשחק.  
+        (סיכום, סטטיסטיקות, מחשבות ותחושות אחרי המחזור הראשון).
+      </p>
+    </section>
+  </main>
 
   <!-- טבלת ליגה בצד ימין -->
   <aside>
@@ -179,26 +113,26 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>1</td><td>ארסנל</td><td>0</td><td>0</td></tr>
-          <tr><td>2</td><td>אסטון וילה</td><td>0</td><td>0</td></tr>
-          <tr><td>3</td><td>בורנמות'</td><td>0</td><td>0</td></tr>
-          <tr><td>4</td><td>ברנטפורד</td><td>0</td><td>0</td></tr>
-          <tr><td>5</td><td>ברייטון</td><td>0</td><td>0</td></tr>
-          <tr><td>6</td><td>צ'לסי</td><td>0</td><td>0</td></tr>
-          <tr><td>7</td><td>קריסטל פאלאס</td><td>0</td><td>0</td></tr>
-          <tr><td>8</td><td>אברטון</td><td>0</td><td>0</td></tr>
-          <tr><td>9</td><td>פולהאם</td><td>0</td><td>0</td></tr>
-          <tr><td>10</td><td>ברנלי</td><td>0</td><td>0</td></tr>
-          <tr><td>11</td><td>לידס </td><td>0</td><td>0</td></tr>
-          <tr><td>12</td><td>ליברפול</td><td>0</td><td>0</td></tr>
-          <tr><td>13</td><td>מנצ'סטר סיטי</td><td>0</td><td>0</td></tr>
-          <tr><td>14</td><td>מנצ'סטר יונייטד</td><td>0</td><td>0</td></tr>
-          <tr><td>15</td><td>ניוקאסל</td><td>0</td><td>0</td></tr>
-          <tr><td>16</td><td>נוטינגהאם פורסט</td><td>0</td><td>0</td></tr>
-          <tr><td>17</td><td>סנדרלנד</td><td>0</td><td>0</td></tr>
-          <tr><td>18</td><td>טוטנהאם</td><td>0</td><td>0</td></tr>
-          <tr><td>19</td><td>ווסטהאם</td><td>0</td><td>0</td></tr>
-          <tr><td>20</td><td>וולבס</td><td>0</td><td>0</td></tr>
+          <tr><td>1</td><td>מנצ'סטר סיטי</td><td>1</td><td>3</td></tr>
+          <tr><td>2</td><td>טוטנהאם</td><td>1</td><td>3</td></tr>
+          <tr><td>3</td><td>סנדרלנד</td><td>1</td><td>3</td></tr>
+          <tr><td>4</td><td>ליברפול</td><td>1</td><td>3</td></tr>
+          <tr><td>5</td><td>ברייטון</td><td>1</td><td>1</td></tr>
+          <tr><td>6</td><td>פולהאם</td><td>1</td><td>1</td></tr>
+          <tr><td>7</td><td>אסטון וילה</td><td>1</td><td>1</td></tr>
+          <tr><td>8</td><td>ניוקאסל</td><td>1</td><td>1</td></tr>
+          <tr><td>9</td><td>קריסטל פאלאס</td><td>1</td><td>0</td></tr>
+          <tr><td>10</td><td>נוטינגהאם פורסט</td><td>1</td><td>0</td></tr>
+          <tr><td>11</td><td>לידס</td><td>1</td><td>0</td></tr>
+          <tr><td>12</td><td>ברנטפורד</td><td>1</td><td>0</td></tr>
+          <tr><td>13</td><td>ארסנל</td><td>1</td><td>0</td></tr>
+          <tr><td>14</td><td>מנצ'סטר יונייטד</td><td>1</td><td>0</td></tr>
+          <tr><td>15</td><td>צ'לסי</td><td>1</td><td>0</td></tr>
+          <tr><td>16</td><td>אברטון</td><td>1</td><td>0</td></tr>
+          <tr><td>17</td><td>בורנמות'</td><td>1</td><td>0</td></tr>
+          <tr><td>18</td><td>ווסטהאם</td><td>1</td><td>0</td></tr>
+          <tr><td>19</td><td>ברנלי</td><td>1</td><td>0</td></tr>
+          <tr><td>20</td><td>וולבס</td><td>1</td><td>0</td></tr>
         </tbody>
       </table>
     </div>
@@ -206,6 +140,8 @@
 
 </body>
 </html>
+
+
 
 
 
