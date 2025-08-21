@@ -109,23 +109,23 @@
       background-color: #f1f1f1;
     }
   </style>
-</head>
-<body>
+<main>
+  <header>
+    <h1>סיקורי משחקים</h1>
+    <p>כאן תמצאו את הסיכומים, הדעות והמחשבות שלי על כל משחק של ארסנל.</p>
+  </header>
 
-  <main>
-    <header>
-      <h1>סיקורי משחקים</h1>
-      <p>כאן תמצאו את הסיכומים, הדעות והמחשבות שלי על כל משחק של ארסנל.</p>
-    </header>
+  <nav>
+    <a href="index.html">חזרה לדף הראשי</a>
+  </nav>
 
-    <nav>
-      <a href="index.html">חזרה לדף הראשי</a>
-    </nav>
-
-    <!-- אזור סיקור -->
-    <section id="match-review">
+  <!-- כרטיס סיקור -->
+  <div class="review-card">
+    <div class="review-header" onclick="toggleReview(this)">
       <h2>⚽ ארסנל - מנצ'סטר יונייטד | מחזור ראשון</h2>
-
+      <span class="arrow">▼</span>
+    </div>
+    <div class="review-content">
       <p>
         המשחק הזה לא היה פשוט בכלל עבור <span class="highlight">ארסנל</span>.  
         הביצועים על המגרש היו חלשים יחסית, ושחקני הרכש החדשים לא הצליחו להראות יכולות יוצאות דופן.
@@ -138,25 +138,76 @@
         הנחישות הזו היא זו שהביאה את הניצחון – אולי לא מרשים, אבל כזה שמראה על אופי מנצח.
       </p>
 
-     <div class="personal-note">
-  <p>
-    את המשחק הראשון ראיתי עם אחי <strong>תומר</strong>.  
-    הוא אוהד יונייטד ואני כמובן אוהד ארסנל.  
-    ישבנו יחד, שתינו בירה, אכלנו פיצה ונהנינו מהאווירה.  
-    למרות היריבות – היה כיף לחזור שוב ולפתוח את עונת הפרמייר ליג מול המסך יחד.
-  </p>
-  <blockquote style="margin-top:15px; padding:10px; border-right:4px solid #ccc; background:#f9f9f9; border-radius:6px;">
-    <strong>תגובתו של תומר:</strong>  
-    "תודה רבה על האירוח המצוין, לגבי המשחק – תוצאת תיקו הייתה משקפת את מהלך המשחק."
-  </blockquote>
-</div>
-
-
-      <div class="ars.jpg">
-       <img src="ars.jpg" alt="תיאור של התמונה" width="300">
+      <div class="personal-note">
+        <p>
+          את המשחק הראשון ראיתי עם אחי <strong>תומר</strong>.  
+          הוא אוהד יונייטד ואני כמובן אוהד ארסנל.  
+          ישבנו יחד, שתינו בירה, אכלנו פיצה ונהנינו מהאווירה.  
+          למרות היריבות – היה כיף לחזור שוב ולפתוח את עונת הפרמייר ליג מול המסך יחד.
+        </p>
+        <blockquote style="margin-top:15px; padding:10px; border-right:4px solid #ccc; background:#f9f9f9; border-radius:6px;">
+          <strong>תגובתו של תומר:</strong>  
+          "תודה רבה על האירוח המצוין, לגבי המשחק – תוצאת תיקו הייתה משקפת את מהלך המשחק."
+        </blockquote>
       </div>
-    </section>
-  </main>
+
+      <div>
+        <img src="ars.jpg" alt="תיאור של התמונה" width="300">
+      </div>
+    </div>
+  </div>
+</main>
+
+<style>
+.review-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ba0c2f;
+  color: #fff;
+  padding: 12px 15px;
+  cursor: pointer;
+}
+
+.review-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.review-header .arrow {
+  transition: transform 0.3s;
+}
+
+.review-card.active .arrow {
+  transform: rotate(180deg);
+}
+
+.review-content {
+  display: none;
+  padding: 15px;
+  line-height: 1.7;
+}
+
+.review-card.active .review-content {
+  display: block;
+}
+</style>
+
+<script>
+function toggleReview(header) {
+  const card = header.parentElement;
+  card.classList.toggle("active");
+}
+</script>
+
 
   <!-- טבלת ליגה בצד ימין -->
   <aside>
@@ -199,6 +250,7 @@
 
 </body>
 </html>
+
 
 
 
