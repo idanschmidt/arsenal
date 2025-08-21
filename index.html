@@ -86,25 +86,27 @@
 
   </section>
 
-  <section class="question-box">
-    <h3>חידת השבוע</h3>
-    <p>מי מחזיק בשיא ההופעות בארסנל בכל הזמנים?</p>
-    <input type="text" id="answer" />
-    <button onclick="checkAnswer()">שלח תשובה</button>
-    <script>
-      function checkAnswer() {
-        var userAnswer = document.getElementById('answer').value.trim();
-       if (
-        userAnswer === "דייוויד אולירי " ||
-       
+ <section class="question-box">
+  <h3>חידת השבוע</h3>
+  <p>מי מחזיק בשיא ההופעות בארסנל בכל הזמנים?</p>
+  <input type="text" id="answer" />
+  <button onclick="checkAnswer()">שלח תשובה</button>
+  <script>
+    function checkAnswer() {
+      var userAnswer = document.getElementById('answer').value.trim();
+
+      if (
+        userAnswer === "דייוויד אולירי" ||
+        userAnswer === "David O'Leary"
       ) {
-          alert("נכון! הופיע במדי המועדון ב-722 משחקים בין 1975 ל-1993, והוא מחזיק בשיא ההופעות לשחקן ");
-        } else {
-          alert("לא נכון, נסו שוב.");
-        }
+        alert("נכון! הופיע במדי המועדון ב-722 משחקים בין 1975 ל-1993, והוא מחזיק בשיא ההופעות לשחקן.");
+      } else {
+        alert("לא נכון, נסו שוב.");
       }
-    </script>
-  </section>
+    }
+  </script>
+</section>
+
 
   <section>
     <h3>הצטרפו אליי!</h3>
@@ -119,6 +121,7 @@
 
 </body>
 </html>
+
 
 
 
